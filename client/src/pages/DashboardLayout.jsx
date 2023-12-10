@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react'
-import { BigSideBar, SmallSideBar, Navbar } from '../components'
+import { BigSidebar, SmallSidebar, Navbar } from '../components'
 import { Outlet } from 'react-router-dom'
 import Wrapper from '../assets/wrappers/Dashboard'
 const DashboardContext = createContext();
@@ -11,7 +11,7 @@ function DashboardLayout() {
   const toggleDarkTheme = ()=>{
     console.log("toggle");
   }
-  const toggleSideBar = ()=>{
+  const toggleSidebar = ()=>{
     setShowSidebar(!showSidebar);
   }
   const logoutUser = ()=>{
@@ -22,14 +22,14 @@ function DashboardLayout() {
     <DashboardContext.Provider
       value = {
         {
-          user, showSidebar, isDarkTheme, toggleDarkTheme, toggleSideBar, logoutUser
+          user, showSidebar, isDarkTheme, toggleDarkTheme, toggleSidebar, logoutUser
         }
       }
     >
     <Wrapper>
     <main className="dashboard">
-      <SmallSideBar></SmallSideBar>
-      <BigSideBar></BigSideBar>
+      <SmallSidebar></SmallSidebar>
+      <BigSidebar></BigSidebar>
       <div>
         <Navbar>
 
